@@ -51,9 +51,9 @@ public class FraseFunction {
 
             EmailMessage emailMessage = new EmailMessage()
                     .setSenderAddress(senderEmail)
-                    .setSubject("Mensagem Faculdade")
-                    .setBodyHtml("Olá, teste!")
-                    .setToRecipients("fuzetirafael@gmail.com");
+                    .setSubject(dto.assunto)
+                    .setBodyHtml(dto.corpo)
+                    .setToRecipients(dto.emailDestino);
 
             context.getLogger().info("Enviando...");
 
